@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
 
-def call(String name = 'java-with-maven') {
+def call(String name = 'my-shared lib') {
     echo "Hello, ${java-with-maven}."
 }
