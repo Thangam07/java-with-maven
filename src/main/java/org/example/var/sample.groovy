@@ -1,5 +1,10 @@
-#!/usr/bin/env groovy
+def call(body) {
+    def myVar = 'Hello, World!'
+    def config = [:]
+    body.resolveStrategy = Closure.DELEGATE_FIRST
+    body.delegate = config
+    body()
 
-def call(String name = 'java-with-maven') {
-  echo "Hello, ${java-with-maven}."
+    echo myVar
+    echo "This is my custom step. Config value: ${config.myConfigValue}"
 }
