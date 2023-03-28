@@ -1,3 +1,5 @@
-def call(name){
-    echo "Hey $(name), How are yoy"
+#!/usr/bin/env groovy
+
+def call(String name = 'java-with-maven') {
+  echo "Hello, ${java-with-maven}."
 }
